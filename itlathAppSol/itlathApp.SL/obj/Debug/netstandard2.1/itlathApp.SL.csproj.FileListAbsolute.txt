@@ -1,0 +1,10 @@
+C:\projects\itlathApp\itlathAppSol\itlathApp.SL\bin\Debug\netstandard2.1\itlathApp.SL.deps.json
+C:\projects\itlathApp\itlathAppSol\itlathApp.SL\bin\Debug\netstandard2.1\itlathApp.SL.dll
+C:\projects\itlathApp\itlathAppSol\itlathApp.SL\bin\Debug\netstandard2.1\itlathApp.SL.pdb
+C:\projects\itlathApp\itlathAppSol\itlathApp.SL\obj\Debug\netstandard2.1\itlathApp.SL.csproj.AssemblyReference.cache
+C:\projects\itlathApp\itlathAppSol\itlathApp.SL\obj\Debug\netstandard2.1\itlathApp.SL.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\itlathApp\itlathAppSol\itlathApp.SL\obj\Debug\netstandard2.1\itlathApp.SL.AssemblyInfoInputs.cache
+C:\projects\itlathApp\itlathAppSol\itlathApp.SL\obj\Debug\netstandard2.1\itlathApp.SL.AssemblyInfo.cs
+C:\projects\itlathApp\itlathAppSol\itlathApp.SL\obj\Debug\netstandard2.1\itlathApp.SL.csproj.CoreCompileInputs.cache
+C:\projects\itlathApp\itlathAppSol\itlathApp.SL\obj\Debug\netstandard2.1\itlathApp.SL.dll
+C:\projects\itlathApp\itlathAppSol\itlathApp.SL\obj\Debug\netstandard2.1\itlathApp.SL.pdb
