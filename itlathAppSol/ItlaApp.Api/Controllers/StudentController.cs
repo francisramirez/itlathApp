@@ -1,11 +1,10 @@
-﻿using itlathApp.DAL.Entities;
-using itlathApp.DAL.Interfaces;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace ItlaApp.Api.Controllers
 {
@@ -13,37 +12,37 @@ namespace ItlaApp.Api.Controllers
     [ApiController]
     public class StudentController : ControllerBase
     {
-        private readonly IStudentRepository studentRepository;
-        public StudentController(IStudentRepository studentRepository)
-        {
-            this.studentRepository = studentRepository;
-        }
 
+        // GET: api/<StudentController>
         [HttpGet]
-        public IEnumerable<Student> Get()
+        public IEnumerable<string> Get()
         {
-            return this.studentRepository.GetAll();
+            return new string[] { "value1", "value2" };
         }
 
-        public Student Get(int id)
+        // GET api/<StudentController>/5
+        [HttpGet("{id}")]
+        public string Get(int id)
         {
-            return this.studentRepository.GetById(id);
+            return "value";
         }
 
+        // POST api/<StudentController>
         [HttpPost]
-        public void Post([FromBody] Student student)
+        public void Post([FromBody] string value)
         {
-            this.studentRepository.Save(student);
         }
-        [HttpPost]
-        public void Put(Student student)
+
+        // PUT api/<StudentController>/5
+        [HttpPut("{id}")]
+        public void Put(int id, [FromBody] string value)
         {
-            this.studentRepository.Update(student);
         }
-        [HttpPost]
-        public void Delete(Student student)
+
+        // DELETE api/<StudentController>/5
+        [HttpDelete("{id}")]
+        public void Delete(int id)
         {
-            this.studentRepository.Remove(student);
         }
     }
 }
