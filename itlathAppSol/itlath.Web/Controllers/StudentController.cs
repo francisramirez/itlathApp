@@ -2,7 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using itlath.Web.Models;
-namespace itlathApp.Web.Models
+using itlathApp.Web.Models;
+
+namespace itlath.Web.Controllers
 {
     public class StudentController : Controller
     {
