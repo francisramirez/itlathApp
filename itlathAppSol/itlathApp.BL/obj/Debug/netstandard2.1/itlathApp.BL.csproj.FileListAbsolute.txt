@@ -1,7 +1,6 @@
 C:\projects\itlathApp\itlathAppSol\itlathApp.BL\bin\Debug\netstandard2.1\itlathApp.BL.deps.json
 C:\projects\itlathApp\itlathAppSol\itlathApp.BL\bin\Debug\netstandard2.1\itlathApp.BL.dll
 C:\projects\itlathApp\itlathAppSol\itlathApp.BL\bin\Debug\netstandard2.1\itlathApp.BL.pdb
-C:\projects\itlathApp\itlathAppSol\itlathApp.BL\obj\Debug\netstandard2.1\itlathApp.BL.csproj.AssemblyReference.cache
 C:\projects\itlathApp\itlathAppSol\itlathApp.BL\obj\Debug\netstandard2.1\itlathApp.BL.GeneratedMSBuildEditorConfig.editorconfig
 C:\projects\itlathApp\itlathAppSol\itlathApp.BL\obj\Debug\netstandard2.1\itlathApp.BL.AssemblyInfoInputs.cache
 C:\projects\itlathApp\itlathAppSol\itlathApp.BL\obj\Debug\netstandard2.1\itlathApp.BL.AssemblyInfo.cs

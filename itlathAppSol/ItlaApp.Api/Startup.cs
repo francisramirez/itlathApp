@@ -33,9 +33,12 @@ namespace ItlaApp.Api
             services.AddDbContext<ItlaContext>(options => options.UseSqlServer(this.Configuration.GetConnectionString("ItlaContext")));
             
             //Dependencias //
-            services.AddTransient<IStudentRepository, StudentRepository>();
-            
-            
+
+            //Repositories
+            services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+            services.AddScoped<IStudentRepository, StudentRepository>();
+
+
             services.AddControllers();
             
             
