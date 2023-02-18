@@ -31,7 +31,7 @@ namespace ItlaApp.Api
         {
             // Context //
             services.AddDbContext<ItlaContext>(options => options.UseSqlServer(this.Configuration.GetConnectionString("ItlaContext")));
-            //
+            
             //Dependencias //
             services.AddTransient<IStudentRepository, StudentRepository>();
             
@@ -41,7 +41,7 @@ namespace ItlaApp.Api
             
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ItlaApp.Api", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ITLA Api", Version = "v1" });
             });
         }
 

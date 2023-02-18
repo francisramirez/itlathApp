@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using itlathApp.DAL.Entities;
+using itlathApp.DAL.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,37 +14,45 @@ namespace ItlaApp.Api.Controllers
     [ApiController]
     public class StudentController : ControllerBase
     {
+        private readonly IStudentRepository studentRepository;
 
-        // GET: api/<StudentController>
-        [HttpGet]
-        public IEnumerable<string> Get()
+        public StudentController(IStudentRepository studentRepository)
         {
-            return new string[] { "value1", "value2" };
+            this.studentRepository = studentRepository;
+        }
+        // GET: api/<StudentController>
+        [HttpGet()]
+        public IActionResult Get()
+        {
+            var students = this.studentRepository.GetAll();
+            return Ok(students);
         }
 
         // GET api/<StudentController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+       [HttpGet("{id}")]
+       public IActionResult Get(int id)
         {
-            return "value";
+            var student = this.studentRepository.GetById(id);
+            return Ok(student);
+        }
+        
+        [HttpPost("Save")]
+        public IActionResult Post([FromBody] Student value)
+        {
+            return Ok();
         }
 
-        // POST api/<StudentController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+       
+        [HttpPost("Update")]
+        public IActionResult Put([FromBody] Student value)
         {
+            return Ok();
         }
 
-        // PUT api/<StudentController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPost("Remove")]
+        public IActionResult Remove([FromBody] Student value)
         {
-        }
-
-        // DELETE api/<StudentController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            return Ok();
         }
     }
 }

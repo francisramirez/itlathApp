@@ -7,3 +7,4 @@ C:\projects\itlathApp\itlathAppSol\itlathApp.DAL\obj\Debug\netstandard2.1\itlath
 C:\projects\itlathApp\itlathAppSol\itlathApp.DAL\obj\Debug\netstandard2.1\itlathApp.DAL.csproj.CoreCompileInputs.cache
 C:\projects\itlathApp\itlathAppSol\itlathApp.DAL\obj\Debug\netstandard2.1\itlathApp.DAL.dll
 C:\projects\itlathApp\itlathAppSol\itlathApp.DAL\obj\Debug\netstandard2.1\itlathApp.DAL.pdb
+C:\projects\itlathApp\itlathAppSol\itlathApp.DAL\obj\Debug\netstandard2.1\itlathApp.DAL.csproj.AssemblyReference.cache
