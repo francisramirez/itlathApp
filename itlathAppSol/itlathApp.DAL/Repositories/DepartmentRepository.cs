@@ -19,6 +19,12 @@ namespace itlathApp.DAL.Repositories
             this.context = context;
             this.ilogger = ilogger;
         }
-        
+        public override List<Department> GetEntities()
+        {
+            return this.context.Departments
+                               .Where(de => !de.Deleted)
+                               .OrderByDescending(cd => cd.CreationDate).ToList();
+        }
+
     }
 }
