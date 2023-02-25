@@ -21,7 +21,7 @@ namespace ItlaApp.Api.Controllers
         [HttpGet()]
         public IActionResult Get()
         {
-            var students = this.studentRepository.GetAll();
+            var students = this.studentRepository.GetEntities();
             return Ok(students);
         }
 
@@ -29,7 +29,7 @@ namespace ItlaApp.Api.Controllers
        [HttpGet("{id}")]
        public IActionResult Get(int id)
         {
-            var student = this.studentRepository.GetById(id);
+            var student = this.studentRepository.GetEntity(id);
             return Ok(student);
         }
         

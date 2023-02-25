@@ -21,14 +21,14 @@ namespace ItlaApp.Api.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var departments = this.departmentRepository.GetAll();
+            var departments = this.departmentRepository.GetEntities();
             return Ok(departments);
         }
 
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            var department = this.departmentRepository.GetById(id);
+            var department = this.departmentRepository.GetEntity(id);
             return Ok(department);
         }
 
