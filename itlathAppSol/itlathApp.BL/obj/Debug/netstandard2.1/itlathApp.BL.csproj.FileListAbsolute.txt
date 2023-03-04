@@ -7,3 +7,7 @@ C:\projects\itlathApp\itlathAppSol\itlathApp.BL\obj\Debug\netstandard2.1\itlathA
 C:\projects\itlathApp\itlathAppSol\itlathApp.BL\obj\Debug\netstandard2.1\itlathApp.BL.csproj.CoreCompileInputs.cache
 C:\projects\itlathApp\itlathAppSol\itlathApp.BL\obj\Debug\netstandard2.1\itlathApp.BL.dll
 C:\projects\itlathApp\itlathAppSol\itlathApp.BL\obj\Debug\netstandard2.1\itlathApp.BL.pdb
+C:\projects\itlathApp\itlathAppSol\itlathApp.BL\bin\Debug\netstandard2.1\itlathApp.DAL.dll
+C:\projects\itlathApp\itlathAppSol\itlathApp.BL\bin\Debug\netstandard2.1\itlathApp.DAL.pdb
+C:\projects\itlathApp\itlathAppSol\itlathApp.BL\obj\Debug\netstandard2.1\itlathApp.BL.csproj.AssemblyReference.cache
+C:\projects\itlathApp\itlathAppSol\itlathApp.BL\obj\Debug\netstandard2.1\itlathApp.BL.csproj.CopyComplete

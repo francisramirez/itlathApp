@@ -1,3 +1,5 @@
+using itlathApp.BL.Contract;
+using itlathApp.BL.Services;
 using itlathApp.DAL.Context;
 using itlathApp.DAL.Interfaces;
 using itlathApp.DAL.Repositories;
@@ -37,6 +39,10 @@ namespace ItlaApp.Api
             //Repositories
             services.AddScoped<IDepartmentRepository, DepartmentRepository>();
             services.AddScoped<IStudentRepository, StudentRepository>();
+
+
+            // APP Services //
+            services.AddTransient<IDepartmentService, DepartmentService>();
 
 
             services.AddControllers();

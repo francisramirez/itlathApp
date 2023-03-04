@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using itlathApp.DAL.Entities;
 using ItlaApp.Api.Requests;
+using itlathApp.BL.Contract;
 
 namespace ItlaApp.Api.Controllers
 {
@@ -13,23 +14,31 @@ namespace ItlaApp.Api.Controllers
     [ApiController]
     public class DepartmentController : ControllerBase
     {
-        private readonly IDepartmentRepository departmentRepository;
-        public DepartmentController(IDepartmentRepository departmentRepository)
+     
+        private readonly IDepartmentService departmentService;
+        public DepartmentController(IDepartmentService departmentService)
         {
-            this.departmentRepository = departmentRepository;
+            this.departmentService = departmentService;
         }
+       
+        
         [HttpGet]
         public IActionResult Get()
         {
-            var departments = this.departmentRepository.GetEntities();
-            return Ok(departments);
+            var result = this.departmentService.GetAll();
+
+            if (!result.Success)
+                return BadRequest(result);
+            
+                        
+            return Ok(result);
         }
 
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            var department = this.departmentRepository.GetEntity(id);
-            return Ok(department);
+            var result = this.departmentService.GetById(id);
+            return Ok(result);
         }
 
         [HttpPost("Save")]
@@ -45,21 +54,21 @@ namespace ItlaApp.Api.Controllers
                 StartDate = departmentAdd.StartDate, 
             };
 
-            this.departmentRepository.Save(department);
+            //this.departmentRepository.Save(department);
             return Ok();
         }
 
         [HttpPost("Update")]
         public IActionResult Put([FromBody] Department department)
         {
-            this.departmentRepository.Update(department);
+           // this.departmentRepository.Update(department);
             return Ok();
         }
 
         [HttpPost("Remove")]
         public IActionResult Remove([FromBody] Department department)
         {
-            this.departmentRepository.Remove(department);
+            //this.departmentRepository.Remove(department);
             return Ok();
         }
     }

@@ -1542,6 +1542,19 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "itlathApp.BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "itlathApp.DAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/itlathApp.BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/itlathApp.BL.dll": {}
+        }
+      },
       "itlathApp.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -5839,6 +5852,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "itlathApp.BL/1.0.0": {
+      "type": "project",
+      "path": "../itlathApp.BL/itlathApp.BL.csproj",
+      "msbuildProject": "../itlathApp.BL/itlathApp.BL.csproj"
+    },
     "itlathApp.DAL/1.0.0": {
       "type": "project",
       "path": "../itlathApp.DAL/itlathApp.DAL.csproj",
@@ -5848,6 +5866,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Swashbuckle.AspNetCore >= 5.6.3",
+      "itlathApp.BL >= 1.0.0",
       "itlathApp.DAL >= 1.0.0"
     ]
   },
@@ -5883,6 +5902,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\projects\\itlathApp\\itlathAppSol\\itlathApp.BL\\itlathApp.BL.csproj": {
+              "projectPath": "C:\\projects\\itlathApp\\itlathAppSol\\itlathApp.BL\\itlathApp.BL.csproj"
+            },
             "C:\\projects\\itlathApp\\itlathAppSol\\itlathApp.DAL\\itlathApp.DAL.csproj": {
               "projectPath": "C:\\projects\\itlathApp\\itlathAppSol\\itlathApp.DAL\\itlathApp.DAL.csproj"
             }

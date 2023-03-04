@@ -55,3 +55,5 @@ C:\projects\itlathApp\itlathAppSol\ItlaApp.Api\obj\Debug\net5.0\ItlaApp.Api.dll
 C:\projects\itlathApp\itlathAppSol\ItlaApp.Api\obj\Debug\net5.0\ref\ItlaApp.Api.dll
 C:\projects\itlathApp\itlathAppSol\ItlaApp.Api\obj\Debug\net5.0\ItlaApp.Api.pdb
 C:\projects\itlathApp\itlathAppSol\ItlaApp.Api\obj\Debug\net5.0\ItlaApp.Api.genruntimeconfig.cache
+C:\projects\itlathApp\itlathAppSol\ItlaApp.Api\bin\Debug\net5.0\itlathApp.BL.dll
+C:\projects\itlathApp\itlathAppSol\ItlaApp.Api\bin\Debug\net5.0\itlathApp.BL.pdb
