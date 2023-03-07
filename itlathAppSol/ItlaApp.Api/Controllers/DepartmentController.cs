@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using itlathApp.DAL.Entities;
 using ItlaApp.Api.Requests;
 using itlathApp.BL.Contract;
+using itlathApp.BL.Dtos.Department;
 
 namespace ItlaApp.Api.Controllers
 {
@@ -14,14 +15,14 @@ namespace ItlaApp.Api.Controllers
     [ApiController]
     public class DepartmentController : ControllerBase
     {
-     
+
         private readonly IDepartmentService departmentService;
         public DepartmentController(IDepartmentService departmentService)
         {
             this.departmentService = departmentService;
         }
-       
-        
+
+
         [HttpGet]
         public IActionResult Get()
         {
@@ -29,8 +30,8 @@ namespace ItlaApp.Api.Controllers
 
             if (!result.Success)
                 return BadRequest(result);
-            
-                        
+
+
             return Ok(result);
         }
 
@@ -44,32 +45,33 @@ namespace ItlaApp.Api.Controllers
         [HttpPost("Save")]
         public IActionResult Post([FromBody] DepartmentAddRequest departmentAdd)
         {
-            Department department = new Department()
+            DepartmentAddDto department = new DepartmentAddDto()
             {
                 Administrator = departmentAdd.Administrator,
                 Budget = departmentAdd.Budget,
-                CreationDate = departmentAdd.CreateDate,
-                CreationUser = departmentAdd.CreateUser,
+                CreateDate = departmentAdd.CreateDate,
+                CreateUser = departmentAdd.CreateUser,
                 Name = departmentAdd.Name,
-                StartDate = departmentAdd.StartDate, 
+                StartDate = departmentAdd.StartDate,
             };
 
-            //this.departmentRepository.Save(department);
-            return Ok();
+            var result =  this.departmentService.SaveDepartment(department);
+            
+            return Ok(result);
         }
 
         [HttpPost("Update")]
-        public IActionResult Put([FromBody] Department department)
+        public IActionResult Put([FromBody] DepartmentUpdateDto department)
         {
-           // this.departmentRepository.Update(department);
-            return Ok();
+           var result= this.departmentService.UpdateDepartment(department);
+            return Ok(result);
         }
 
         [HttpPost("Remove")]
-        public IActionResult Remove([FromBody] Department department)
+        public IActionResult Remove([FromBody] DepartmentRemoveDto department)
         {
-            //this.departmentRepository.Remove(department);
-            return Ok();
+            var result = this.departmentService.RemoveDepartment(department);
+            return Ok(result);
         }
     }
 }

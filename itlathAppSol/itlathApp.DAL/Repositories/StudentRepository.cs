@@ -24,5 +24,6 @@ namespace itlathApp.DAL.Repositories
         {
             throw new NotImplementedException();
         }
+
     }
 }
